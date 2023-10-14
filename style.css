@@ -1,0 +1,78 @@
+/*Global Styles*/
+html{
+  width: 100%;
+  height: 100%;
+  font-family: 'Cantarell', sans-serif;
+  font-size: 16px;
+}
+
+body{
+    background-image: url("jcrewimage.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #616060;
+}
+
+h1{
+  text-align: right;
+  font-size: 4rem;
+  font-weight: bold;
+  margin: 20px 20px 20px 20px;
+}
+
+h2 {
+  background-color: rgb(236, 228, 212);
+  font-size: 2.5rem;
+  margin: auto;
+  height: 90px;
+  padding-top: 30px;
+}
+
+label {
+  font-size: 1.5rem;
+  color: #be8b6f;
+}
+
+input {
+  background-color: rgb(236, 228, 212);
+  padding: 10px;
+  margin-bottom: 25px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+button {
+  margin-top: 60px;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 25px 10px 25px;
+  background-color: rgb(236, 228, 212);
+  color: #be8b6f; 
+  font-size: 1rem;
+}
+
+p {
+  text-align: center;
+}
+
+
+/*Layout Styles*/
+.grid-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+ .calc{
+  width: 400px;
+  height: 500px;
+  background-color: rgba(236,228,212, 0.85);
+  text-align: center; 
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.user-input{
+  margin-top: 50px;
+}

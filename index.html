@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>EOD Calculator</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cantarell:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <h1>EOD Calculator</h1>
+
+  <div class="grid-container">
+
+    <div class="calc calc1">
+      <h2 id="plan">Plan Comp</h2>
+      <div class="user-input">
+      <label for="todays-sales">Today's Sales:</label><br>
+      <input type="number" id="todays-sales" name="todays-sales"><br>
+      <label for="plan-sales">Planned Sales:</label><br>
+      <input type="number" id="plan-sales" name="plan-sales"><br>
+      <button type="submit" id="plan-calc">Calculate</button>
+      </div>
+    </div>
+
+    <div class="calc calc2">
+      <h2 id="ly">LY Comp</h2>
+      <div class="user-input">
+      <label for="ty-sales">Today's Sales:</label><br>
+      <input type="number" id="ty-sales" name="ty-sales"><br>
+      <label for="ly-sales">Last Years Sales:</label><br>
+      <input type="number" id="ly-sales" name="ly-sales"><br>
+      <button type="submit" id="ly-calc">Calculate</button>
+      </div>
+    </div>
+
+    <div class="calc calc3">
+      <h2 id="spread">Spread</h2>
+      <div class="user-input">
+      <label for="ty-traffic">This years traffic:</label><br>
+      <input type="number" id="ty-traffic" name="ty-traffic"><br>
+      <label for="ly-traffic">Last years traffic:</label><br>
+      <input type="number" id="ly-traffic" name="ly-traffic"><br>
+      <button type="submit" id="spread-calc">Calculate</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
