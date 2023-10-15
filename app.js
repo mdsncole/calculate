@@ -6,18 +6,37 @@ const lySales = document.querySelector("#ly-sales");
 const tyTraffic = document.querySelector("#ty-traffic");
 const lyTraffic = document.querySelector("#ly-traffic");
 
-//Calculator submit buttons
+//Calculator submit buttons and results
 const planCalc = document.querySelector("#plan-calc");
 const lyCalc = document.querySelector("#ly-calc");
 const spreadCalc = document.querySelector("#spread-calc");
+const planResult = document.querySelector("#plan-result");
+const lyResult = document.querySelector("#ly-result");
+const spreadResult = document.querySelector("#spread-result");
 
 
 
 
+ planCalc.addEventListener("click", function (e) {
+     let planResult = Number((todaysSales.value / planSales.value) * 100 - 100);
+     planResult.innerText = `Result:${planResult}`;
+     console.log(planResult);
+ });
 
-// planCalc.addEventListener("click", function () {
-//   return (todaysSales / planSales) * 100 - 100
-// });
+
+lyCalc.addEventListener("click", function (e) {
+    let lyResult = Number((tySales.value/lySales.value) * 100 - 100);
+    lyResult.innerText = `Result:${lyResult}`;
+    console.log(lyResult);
+});
+
+spreadCalc.addEventListener("click", function (e) {
+    let trafficResult = Number((tyTraffic.value / lyTraffic.value) * 100 - 100);
+    let spreadResult = lyCalc-trafficResult;
+    spreadResult.innerText = `${spreadResult}`;
+    console.log(spreadResult);
+    
+});
 
 
 
