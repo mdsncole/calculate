@@ -42,13 +42,20 @@ input {
 }
 
 button {
-  margin-top: 60px;
+  margin-top: 40px;
   border: none;
   border-radius: 5px;
   padding: 10px 25px 10px 25px;
   background-color: rgb(236, 228, 212);
   color: #be8b6f; 
   font-size: 1rem;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #be8b6f;
+  color: white;
 }
 
 p {
