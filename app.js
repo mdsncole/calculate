@@ -16,46 +16,21 @@ const spreadResult = document.querySelector("#spread-result");
 
 
 
+//Calculate percent to sales goal.
+planCalc.addEventListener("click", function (e) {
+    let planResult = Number((todaysSales.value / planSales.value) * 100 - 100).toFixed(2);
+    document.querySelector("#plan").innerHTML = `Plan Comp = </br> ${planResult}`;
+});
 
- planCalc.addEventListener("click", function (e) {
-     let planResult = Number((todaysSales.value / planSales.value) * 100 - 100);
-     planResult.innerText = `Result:${planResult}`;
-     console.log(planResult);
- });
-
-
+//Calculate percent to last years sales.
 lyCalc.addEventListener("click", function (e) {
-    let lyResult = Number((tySales.value/lySales.value) * 100 - 100);
-    lyResult.innerText = `Result:${lyResult}`;
-    console.log(lyResult);
+    let lyResult = Number((tySales.value / lySales.value) * 100 - 100).toFixed(2);
+    document.querySelector("#ly").innerHTML = `LY Comp = </br> ${lyResult}`;
 });
 
-spreadCalc.addEventListener("click", function (e) {
-    let trafficResult = Number((tyTraffic.value / lyTraffic.value) * 100 - 100);
-    let spreadResult = lyCalc-trafficResult;
-    spreadResult.innerText = `${spreadResult}`;
-    console.log(spreadResult);
-    
-});
-
-
-
-
-
-//% difference of this years traffic from last years traffic
-// const trafficPercent = (tyTraffic, lyTraffic) => (
-//   (tyTraffic / lyTraffic) * 100 - 100
-// );
-
-// //% difference from this years sales to last years sales
-// const salesPercent = (tySales, lySales) => (
-//   (tySales / lySales) * 100 - 100
-// );
-
-// //finding spread from TY/LY sales to TY/LY traffic
-// const spread = (salesPercent, trafficPercent) => (
-//   salesPercent - trafficPercent
-// );
-
-// Testing
-// console.log(trafficPercent(123, 213));
+// //Calculate spread. With traffic percent from this year compared to last years traffic, subtracted from sales percent compared to last year.
+// spreadCalc.addEventListener("click", function (e) {
+//     // let trafficResult = Number((tyTraffic.value / lyTraffic.value) * 100 - 100).toFixed(2);
+//     let spreadResult = Number(lyResult-(tyTraffic.value / lyTraffic.value) * 100 - 100).toFixed(2);
+//     document.querySelector("#spread").innerHTML = `Spread = </br> ${spreadResult}`;
+// }); 
