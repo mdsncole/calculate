@@ -20,17 +20,23 @@ const spreadResult = document.querySelector("#spread-result");
 planCalc.addEventListener("click", function (e) {
     let planResult = Number((todaysSales.value / planSales.value) * 100 - 100).toFixed(2);
     document.querySelector("#plan").innerHTML = `Plan Comp = </br> ${planResult}`;
+    todaysSales.value = "";
+    planSales.value = "";
 });
 
 //Calculate percent to last years sales.
 lyCalc.addEventListener("click", function (e) {
     let lyResult = Number((tySales.value / lySales.value) * 100 - 100).toFixed(2);
     document.querySelector("#ly").innerHTML = `LY Comp = </br> ${lyResult}`;
+    tySales.value = "";
+    lySales.value = "";
 });
 
 // //Calculate spread. With traffic percent from this year compared to last years traffic, subtracted from sales percent compared to last year.
-// spreadCalc.addEventListener("click", function (e) {
-//     // let trafficResult = Number((tyTraffic.value / lyTraffic.value) * 100 - 100).toFixed(2);
-//     let spreadResult = Number(lyResult-(tyTraffic.value / lyTraffic.value) * 100 - 100).toFixed(2);
-//     document.querySelector("#spread").innerHTML = `Spread = </br> ${spreadResult}`;
-// }); 
+spreadCalc.addEventListener("click", function (e) {
+    // let trafficResult = Number((tyTraffic.value / lyTraffic.value) * 100 - 100).toFixed(2);
+    let spreadResult = Number(lyResult.value-((tyTraffic.value / lyTraffic.value) * 100 - 100)).toFixed(2);
+    document.querySelector("#spread").innerHTML = `Spread = </br> ${spreadResult}`;
+    tyTraffic.value = "";
+    lyTraffic.value = "";
+}); 
