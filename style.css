@@ -67,11 +67,16 @@ p {
 
 
 /*Layout Styles*/
+.box{
+  display: flex;
+  align-items: center;
+}
 .grid-container{
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   justify-content: space-around;
+  flex-wrap: nowrap;
+  align-items: center;
 }
 
  .calc{
@@ -88,21 +93,21 @@ p {
 }
 
 /* Medium and Smaller Devices Styles */
-/* @media only screen and (max-width: 768px){
+@media only screen and (max-width: 1200px){
   .grid-container {
       display: flex;
       flex-direction: column;
-      flex-wrap: nowrap;
+      flex-wrap: wrap;
       justify-content: space-around;
     }
   
     .calc {
-      width: 500px;
-      height: 600px;
+      width: 400px;
+      height: 500px;
       background-color: rgba(236, 228, 212, 0.85);
       text-align: center;
       border-radius: 5px;
       margin-top: 20px;
     }
-} */
+}
 /* trying to figure out how to make calcs stack when on mobile or tablet devices */
